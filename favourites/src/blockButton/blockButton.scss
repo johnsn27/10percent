@@ -1,0 +1,20 @@
+.outerDiv {
+  background: black;
+  width:10%;
+}
+
+.top {
+  height: 50px;
+}
+.divbutton {
+  height: 10px;
+  background: white;
+}
+
+button {
+  display: none;
+}
+
+.outerDiv:hover button {
+  display: block;
+}

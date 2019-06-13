@@ -3,7 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@bbc/igm-btn": "^2.0.0",
     "favorite-star": "^0.1.5",
+    "node-sass": "^4.12.0",
     "react": "^16.8.6",
     "react-cookie": "^4.0.0",
     "react-dom": "^16.8.6",
