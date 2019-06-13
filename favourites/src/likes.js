@@ -24,11 +24,11 @@ class Likes extends React.Component {
   render() {
     console.log(this.state.isFav1);
     return (
-      <div class="outerDiv">
-        <div class="top">
+      <div className="outerDiv">
+        <div className="top">
         </div>
-        <div class="divbutton">
-          <Btn id="Component1" type="primary" tab-index="1" className="Button" text="Component1">
+        <div className="divbutton">
+          <Btn id="Component1" type="submit" tab-index="1" className="Button" text="Component1">
           </Btn>
         </div>
       </div>
