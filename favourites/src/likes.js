@@ -9,18 +9,11 @@ class Likes extends React.Component {
     this.updateLikes = this.updateLikes.bind(this);
   }
 
-  componentDidUpdate() {
-    console.log('componentDidUpdate')
-  }
-
   updateLikes(name) {
-    console.log('updateLikes')
     if (localStorage.getItem(name)) {
-      console.log('if');
       localStorage.removeItem(name);
     }
     else {
-      console.log('else');
       localStorage.setItem(name, name);
     }
   }
@@ -33,7 +26,6 @@ class Likes extends React.Component {
         x = x + localStorage.key(i) + " ";
       }
     }
-    console.log(x);
   }
 
   render() {
