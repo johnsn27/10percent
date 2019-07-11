@@ -1,17 +1,24 @@
+.wrapper {
+  width: 100%;
+}
+
 .outerDiv {
   background: black;
   width:10%;
-  height:100px;
 }
 
-.button1{
-  width:140px;
-  float:left;
-  height:100%;
+.outerDiv:hover button {
+  display: block;
 }
 
-.button2{
-  margin-left:140px;
+.outerDiv2 {
+  background: black;
+  float: right;
+  width:10%;
+}
+
+.outerDiv2:hover button {
+  display: block;
 }
 
 .top {

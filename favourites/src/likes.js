@@ -31,20 +31,31 @@ class Likes extends React.Component {
 
   render() {
     return (
-      <div className="outerDiv">
-        <div id="button1" className="divbutton">
+      <div className="wrapper">
+        <div className="outerDiv">
+          <div className="top">
+          </div>
+          <div id="button1" className="divbutton">
+            <button onClick={() => {
+              this.updateLikes("button1")
+            }}>Click Me!</button>
+          </div>
           <button onClick={() => {
-            this.updateLikes("button1")
-          }}>Click Me!</button>
+            this.getLikes()
+          }}>Get Likes</button>
         </div>
-        <div id="button2" className="divbutton">
+        <div className="outerDiv2">
+          <div className="top">
+          </div>
+          <div id="button2" className="divbutton">
+            <button onClick={() => {
+              this.updateLikes("button2")
+            }}>Click Me!</button>
+          </div>
           <button onClick={() => {
-            this.updateLikes("button2")
-          }}>Click Me!</button>
+            this.getLikes()
+          }}>Get Likes</button>
         </div>
-        <button onClick={() => {
-          this.getLikes()
-        }}>Get Likes</button>
       </div>
     );
   }
