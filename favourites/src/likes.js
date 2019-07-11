@@ -17,15 +17,14 @@ class Likes extends React.Component {
   }
 
   updateLikes(name) {
-    localStorage.setItem(name, name);
-    this.setState((prevState, props) => {
-      return {
-        isFav: !prevState.isFav,
-      };
-    });
-    console.log(this.state.isFav);
-    if (!this.state.isFav) {
-      localStorage.removeItem(name)
+    console.log('updateLikes')
+    if(localStorage.getItem(name)) {
+      console.log('if');
+      localStorage.removeItem(name);
+    }
+    else {
+      console.log('else');
+      localStorage.setItem(name, name);
     }
   }
 
@@ -42,6 +41,11 @@ class Likes extends React.Component {
         <div id="button1" className="divbutton">
           <button onClick={() => {
             this.updateLikes("button1")
+          }}>Click Me!</button>
+        </div>
+        <div id="button2" className="divbutton">
+          <button onClick={() => {
+            this.updateLikes("button2")
           }}>Click Me!</button>
         </div>
         <button onClick={() => {
