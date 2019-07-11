@@ -15,7 +15,7 @@ class Likes extends React.Component {
 
   updateLikes(name) {
     console.log('updateLikes')
-    if(localStorage.getItem(name)) {
+    if (localStorage.getItem(name)) {
       console.log('if');
       localStorage.removeItem(name);
     }
@@ -25,9 +25,15 @@ class Likes extends React.Component {
     }
   }
 
-  getLikes(name) {
-    const item1 = localStorage.getItem(name);
-    console.log(item1);
+  getLikes() {
+    var x="", i, currentItem;
+    for (i = 0; i < localStorage.length; i++) {
+      currentItem = localStorage.key(i);
+      if (currentItem === 'button1' || currentItem === 'button2') {
+        x = x + localStorage.key(i) + " ";
+      }
+    }
+    console.log(x);
   }
 
   render() {
@@ -46,7 +52,7 @@ class Likes extends React.Component {
           }}>Click Me!</button>
         </div>
         <button onClick={() => {
-          this.getLikes('button1')
+          this.getLikes()
         }}>Get Likes</button>
       </div>
 
