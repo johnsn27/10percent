@@ -6,9 +6,6 @@ class Likes extends React.Component {
   constructor(props) {
 
     super(props);
-    this.state = {
-      isFav: true,
-    }
     this.updateLikes = this.updateLikes.bind(this);
   }
 
