@@ -7,36 +7,50 @@ class Likes extends React.Component {
 
     super(props);
     this.state = {
-      isFav1: true,
+      isFav: true,
     }
-    this.updateLikes1 = this.updateLikes1.bind(this);
+    this.updateLikes = this.updateLikes.bind(this);
   }
 
-  updateLikes1() {
-    console.log("1");
+  componentDidUpdate() {
+    console.log('componentDidUpdate')
+  }
+
+  updateLikes(name) {
+    localStorage.setItem(name, name);
     this.setState((prevState, props) => {
       return {
-        isFav1: !prevState.isFav1,
+        isFav: !prevState.isFav,
       };
     });
+    console.log(this.state.isFav);
+    if (!this.state.isFav) {
+      localStorage.removeItem(name)
+    }
+  }
+
+  getLikes(name) {
+    const item1 = localStorage.getItem(name);
+    console.log(item1);
   }
 
   render() {
-    console.log(this.state.isFav1);
     return (
       <div className="outerDiv">
         <div className="top">
         </div>
-        <div className="divbutton">
-          <Btn id="Component1" type="submit" tab-index="1" className="Button" text="Component1">
-          </Btn>
+        <div id="button1" className="divbutton">
+          <button onClick={() => {
+            this.updateLikes("button1")
+          }}>Click Me!</button>
         </div>
+        <button onClick={() => {
+          this.getLikes('button1')
+        }}>Get Likes</button>
       </div>
+
     );
-
   }
-
-
 }
 
 export default Likes;
