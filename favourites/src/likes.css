@@ -1,0 +1,23 @@
+.wrapper {
+  color: blue;
+  background-color: blue;
+}
+
+.block2wrapper {
+  float: left;
+}
+
+.block1wrapper:hover + .block2wrapper {
+  display: block;
+}
+
+.block2wrapper {
+  float: left;
+  display: none;
+}
+
+.buttonsWrapper {
+  color: red;
+  background-color: red
+}
+
