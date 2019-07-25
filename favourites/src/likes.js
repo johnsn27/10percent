@@ -52,14 +52,14 @@ class Likes extends React.Component {
       //     this.getLikes()
       //   }}>Get Likes</button>
       // </div>
-      <div id="block" onClick={() => {
-        this.updateLikes("block1")
-        this.getLikes()
-      }}>block 1
+      <div>
+        <div id="block" onClick={() => {
+        }}>block 1
         <div id="favourite" onClick={() => {
-          this.updateLikes("block2")
-          this.getLikes()
-        }}>block 2
+            this.updateLikes("headline")
+            this.getLikes()
+          }}>block 2
+        </div>
         </div>
       </div>
     );
