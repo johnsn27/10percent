@@ -31,26 +31,36 @@ class Likes extends React.Component {
 
   render() {
     return (
-      <div className="wrapper">
-        <div id="buttonsWrapper" className="buttonsWrapper">
-          <div id="block1wrapper" className="block1wrapper">
-            <div id="block1" className="divbutton">
-              <button onClick={() => {
-                this.updateLikes("block1")
-              }}>block 1</button>
-            </div>
-          </div>
-          <div id="block2wrapper" className="block2wrapper">
-            <div id="block2" className="divbutton">
-              <button onClick={() => {
-                this.updateLikes("block2")
-              }}>block 2</button>
-            </div>
-          </div>
-        </div>
-        <button onClick={() => {
+      // <div className="wrapper">
+      //   <div id="buttonsWrapper" className="buttonsWrapper">
+      //     <div id="block1wrapper" className="block1wrapper">
+      //       <div id="block1" className="divbutton">
+      //         <button onClick={() => {
+      //           this.updateLikes("block1")
+      //         }}>block 1</button>
+      //       </div>
+      //     </div>
+      //     <div id="block2wrapper" className="block2wrapper">
+      //       <div id="block2" className="divbutton">
+      //         <button onClick={() => {
+      //           this.updateLikes("block2")
+      //         }}>block 2</button>
+      //       </div>
+      //     </div>
+      //   </div>
+      //   <button onClick={() => {
+      //     this.getLikes()
+      //   }}>Get Likes</button>
+      // </div>
+      <div id="block" onClick={() => {
+        this.updateLikes("block1")
+        this.getLikes()
+      }}>block 1
+        <div id="favourite" onClick={() => {
+          this.updateLikes("block2")
           this.getLikes()
-        }}>Get Likes</button>
+        }}>block 2
+        </div>
       </div>
     );
   }

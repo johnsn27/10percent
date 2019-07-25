@@ -1,4 +1,4 @@
-.wrapper {
+/* .wrapper {
   color: blue;
   background-color: blue;
 }
@@ -11,6 +11,10 @@
   display: block;
 }
 
+.block1wrapper {
+  float: left;
+}
+
 .block2wrapper {
   float: left;
   display: none;
@@ -19,5 +23,30 @@
 .buttonsWrapper {
   color: red;
   background-color: red
-}
+} */
 
+*{
+  margin:0;
+  padding:0;
+}
+#block{
+  height:10%;
+  width:10%;
+  background-color:red;
+  padding:0;
+  margin:0;
+  position:absolute;
+}
+#favourite{
+  height:50%;
+  width:100%;
+  background-color:blue;
+  position:absolute;
+  bottom:0;
+  margin:0;
+  padding:0;
+  visibility:hidden;
+}
+#block:hover > #favourite{
+  visibility:visible;
+}
