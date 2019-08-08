@@ -1,0 +1,14 @@
+#def {
+    display: none;
+  }
+    
+  #abc:hover + #def {
+    display: block;
+  }
+
+  #first {
+    float: left;
+    width: 300px;
+    border: 1px solid red;
+  }
+  
