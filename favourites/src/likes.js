@@ -3,7 +3,7 @@ import './likes.css';
 
 class LeftSideBar extends Component {
 
-  updateLikes(blockType) {
+  updateClicks(blockType) {
     if(typeof(Storage) !== "undefined") {
       if (localStorage.getItem(blockType)) {
         const currentValue = Number(localStorage.getItem(blockType));
@@ -21,9 +21,9 @@ class LeftSideBar extends Component {
   render() {
     return (
       <div className="flex-container row">
-        <div className="flex-item" onClick={() => this.updateLikes('headline')}>Headline</div>
-        <div className="flex-item" onClick={() => this.updateLikes('text')}>Text</div>
-        <div className="flex-item" onClick={() => this.updateLikes('another one')}>Hover over me!</div>
+        <div className="flex-item" onClick={() => this.updateClicks('headline')}>Headline</div>
+        <div className="flex-item" onClick={() => this.updateClicks('text')}>Text</div>
+        <div className="flex-item" onClick={() => this.updateClicks('another one')}>Hover over me!</div>
       </div>
     );
   }
