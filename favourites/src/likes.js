@@ -9,10 +9,10 @@ class LeftSideBar extends Component {
       <div class="flex-container row">
         <div class="flex-item">"Hover over me!</div>
         <div id="hover">Stuff shown on hover</div>
-        <div class="flex-item">2</div>
-        <div class="flex-item">3</div>
-        <div class="flex-item">4</div>
-        <div class="flex-item">5</div>
+        <div class="flex-item">"Hover over me!</div>
+        <div id="hover">Stuff shown on hover</div>
+        <div class="flex-item">"Hover over me!</div>
+        <div id="hover">Stuff shown on hover</div>
       </div>
     );
   }
