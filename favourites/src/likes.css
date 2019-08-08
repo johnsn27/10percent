@@ -1,27 +1,32 @@
-@media only screen and (min-width: 1000px) {
-  .my-section-button {
-    align-items: center;
-    border-radius: 8px;
-    border-style: solid;
-    display: flex;
-    justify-content: center;
-    margin: 10%;
-    width: 80%;
-    min-width: 112px;
-  }
+.flex-container {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  
+  -ms-box-orient: horizontal;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: flex;
+}
 
-  .my-section {
-    float: left;
-    width: 20%;
-  }
+.row            { 
+  -webkit-flex-direction: row; 
+  flex-direction: row;
+}
 
-
-  .my-section-buttons {
-    float: left;
-    width: 100%;
-  }
-
-  .button-border {
-    border-style: solid;
-  }
+.flex-item {
+  background: tomato;
+  padding: 5px;
+  width: 50px;
+  height: 50px;
+  margin: 5px;
+  
+  line-height: 50px;
+  color: white;
+  font-weight: bold;
+  font-size: 2em;
+  text-align: center;
 }
