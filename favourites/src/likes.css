@@ -17,6 +17,14 @@
   flex-direction: row;
 }
 
+#hover {
+  display: none;
+}
+  
+.flex-item:hover + #hover {
+  display: block;
+}
+
 .flex-item {
   background: tomato;
   padding: 5px;
@@ -27,6 +35,6 @@
   line-height: 50px;
   color: white;
   font-weight: bold;
-  font-size: 2em;
+  font-size: 12px;
   text-align: center;
 }
