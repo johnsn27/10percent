@@ -41,13 +41,13 @@
 }
 
 #headline {
-  order: 1;
+  order: unset;
 }
 
 #text {
-  order: 3;
+  order: unset;
 }
 
 #anotherOne {
-  order: 2;
+  order: unset;
 }
