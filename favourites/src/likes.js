@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import './likes.css';
+// import blockButton from './blockButton/blockButton';
+
+// TODO: create show more button
 
 class LeftSideBar extends Component {
 
@@ -18,40 +21,37 @@ class LeftSideBar extends Component {
     }
   }
 
-  getOrder(blocks) {
-    blocks.sort(function (a, b) {
-      return b - a
-    });
-    console.log(blocks)
-    return blocks;
-  }
+// TODO: make this function be called
 
-  getLikes(blockTypes, blockClicks) {
-    // let blockType, blockClick, currentItem;
-    // let blockOrder = []
-    // for (blockType = 0; blockType < blockTypes.length; blockType++) {
-    //   currentItem = blockTypes[blockType];
-    //   if (localStorage.getItem(currentItem) == blockClicks[blockClick]) {
-    //     blockOrder.push(currentItem)
-    //     blockClick++;
-    //   }
-    // }
-    // console.log(blockOrder);
-    localStorage.find(key => localStorage[key] === 49);
+  getOrder(a, b) {
+    if (a[1] === b[1]) {
+      return 0;
+    }
+    else {
+      return (b[1] < a[1]) ? -1 : 1;
+    }
   }
 
   render() {
     const blockTypes = ['text', 'headline', 'anotherOne'];
-    const blockClicks = [localStorage.getItem(blockTypes[0]), localStorage.getItem(blockTypes[1]), localStorage.getItem(blockTypes[2]),];
-    const blockOrder = this.getOrder(blockClicks);
-
-    this.getLikes(blockTypes, blockClicks);
+    const blockArray = [[blockTypes[0], localStorage.getItem(blockTypes[0])], [blockTypes[1], localStorage.getItem(blockTypes[1])], [blockTypes[2], localStorage.getItem(blockTypes[2])]]
+    console.log(blockArray);
+    blockArray.sort(compareSecondColumn);
+    function compareSecondColumn(a, b) {
+      if (a[1] === b[1]) {
+        return 0;
+      }
+      else {
+        return (b[1] < a[1]) ? -1 : 1;
+      }
+    }
+    console.log(blockArray[0][0]);
 
     return (
       <div className="flex-container row">
-        <div id="headline" className="flex-item" onClick={() => this.updateClicks('headline')}>Headline</div>
-        <div id="text" className="flex-item" onClick={() => this.updateClicks('text')}>Text</div>
-        <div id="anotherOne" className="flex-item" onClick={() => this.updateClicks('anotherOne')}>Another One</div>
+        <div id={blockArray[0][0]} className="flex-item" onClick={() => this.updateClicks(blockArray[0][0])}>{blockArray[0][0]}</div>
+        <div id={blockArray[1][0]} className="flex-item" onClick={() => this.updateClicks(blockArray[1][0])}>{blockArray[1][0]}</div>
+        <div id={blockArray[2][0]} className="flex-item" onClick={() => this.updateClicks(blockArray[2][0])}>{blockArray[2][0]}</div>
       </div>
     );
   }
