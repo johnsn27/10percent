@@ -21,8 +21,6 @@ class likes extends Component {
     }
   }
 
-  // TODO: make this function be called
-
   getOrder(blockArray) {
     blockArray.sort(compareSecondColumn);
     function compareSecondColumn(a, b) {
