@@ -6,7 +6,7 @@ import GELIcon from '@bbc/igm-gel-icon';
 
 // TODO: create show more button
 
-class LeftSideBar extends Component {
+class likes extends Component {
 
   updateClicks(blockType) {
     if (typeof (Storage) !== "undefined") {
@@ -39,47 +39,47 @@ class LeftSideBar extends Component {
   }
 
   render() {
-    const defaultUser = process.env.DEFAULT_CERT_SUBJECT;
-    console.log(defaultUser);
     const blockTypes = ['text', 'headline', 'anotherOne'];
     const blockArray = [[blockTypes[0], localStorage.getItem(blockTypes[0])], [blockTypes[1], localStorage.getItem(blockTypes[1])], [blockTypes[2], localStorage.getItem(blockTypes[2])]]
     const sortedBlockArray = this.getOrder(blockArray);
-    const listOfItems = {
-
-    }
 
     return (
-      <div className="flex-container row">
-        <div id={sortedBlockArray[0][0]} className="flex-item" onClick={() => this.updateClicks(blockArray[0][0])}>{sortedBlockArray[0][0]}</div>
-        <div id={sortedBlockArray[1][0]} className="flex-item" onClick={() => this.updateClicks(blockArray[1][0])}>{sortedBlockArray[1][0]}</div>
-        <div id={sortedBlockArray[2][0]} className="flex-item" onClick={() => this.updateClicks(blockArray[2][0])}>{sortedBlockArray[2][0]}</div>
-        <Reveal
-          toggler={(onToggle, isOpen) => (
-            <div onClick={onToggle}>
-              <Btn
-                aria-label="hello"
-                onClick={onToggle}
-                type="plainLink"
-                className="toggler"
-              >
-                {isOpen ? (
-                  <GELIcon type="upChevron" />
-                ) : (
-                    <GELIcon type="downChevron" />
-                  )}
-              </Btn>
-            </div>
-          )}
-          className="info-section"
-          isOpen={true}
-        >
+      <div>
+        <div className="flex-container row">
           <div id={sortedBlockArray[0][0]} className="flex-item" onClick={() => this.updateClicks(blockArray[0][0])}>{sortedBlockArray[0][0]}</div>
           <div id={sortedBlockArray[1][0]} className="flex-item" onClick={() => this.updateClicks(blockArray[1][0])}>{sortedBlockArray[1][0]}</div>
           <div id={sortedBlockArray[2][0]} className="flex-item" onClick={() => this.updateClicks(blockArray[2][0])}>{sortedBlockArray[2][0]}</div>
-        </Reveal>
+        </div>
+        <div className="Reveal">
+          <Reveal
+            toggler={(onToggle, isOpen) => (
+              <div onClick={onToggle}>
+                <Btn
+                  aria-label="hello"
+                  onClick={onToggle}
+                  type="plainLink"
+                  className="toggler"
+                >
+                  {isOpen ? (
+                    <GELIcon type="upChevron" />
+                  ) : (
+                      <GELIcon type="downChevron" />
+                    )}
+                </Btn>
+              </div>
+            )}
+            className="info-section"
+            isOpen={true}
+          >
+            <div id={sortedBlockArray[0][0]} className="flex-item" onClick={() => this.updateClicks(blockArray[0][0])}>{sortedBlockArray[0][0]}</div>
+            <div id={sortedBlockArray[1][0]} className="flex-item" onClick={() => this.updateClicks(blockArray[1][0])}>{sortedBlockArray[1][0]}</div>
+            <div id={sortedBlockArray[2][0]} className="flex-item" onClick={() => this.updateClicks(blockArray[2][0])}>{sortedBlockArray[2][0]}</div>
+
+          </Reveal>
+        </div >
       </div>
     );
   }
 }
 
-export default LeftSideBar;
+export default likes;
