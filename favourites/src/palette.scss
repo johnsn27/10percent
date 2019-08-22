@@ -1,0 +1,146 @@
+@import './variables.scss';
+
+.palette {
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+  width: 100%;
+  max-width: 760px;
+}
+
+.palette__toolbar {
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(0);
+  transition: transform 0.3s ease;
+
+  &::after {
+    display: none;
+  }
+
+  @media (min-width: $medium) {
+    justify-content: flex-start;
+  }
+
+  .igm-collapsable-toolbar__collapser {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+  }
+}
+
+.palette__toolbar--closed {
+  transform: translateY(-25px);
+  margin-bottom: -20px;
+
+  .igm-collapsable-toolbar__collapser {
+    opacity: 0;
+  }
+}
+
+.palette__line {
+  display: block;
+  border-top: 2px dashed $boulder-grey;
+  max-width: 687px;
+  margin: 6px 0 8px 32px;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  @media (min-width: 650px) {
+    margin-left: 41px;
+    margin-right: 32px;
+  }
+}
+
+.palette__button.igm-btn {
+  display: flex;
+  align-items: center;
+  height: 32px;
+  margin-right: 8px;
+  padding: 5px 10px;
+  color: $tundora-grey;
+  font-size: 16px;
+  font-weight: normal;
+  background-color: transparent;
+  cursor: pointer;
+
+  &:focus,
+  &:hover,
+  &:active {
+    background-color: $tundora-grey;
+    color: $white;
+  }
+
+  @media (min-width: $medium) {
+    border: 1px solid $boulder-grey;
+  }
+
+  &.igm-btn {
+    min-width: unset;
+  }
+
+  .gel-icon {
+    display: flex;
+    align-items: center;
+    width: 14px;
+    height: 14px;
+    color: inherit;
+  }
+}
+
+.palette__button-label {
+  display: none;
+  margin-left: 8px;
+  line-height: 1;
+  text-transform: capitalize;
+
+  @media (min-width: $medium) {
+    display: block;
+  }
+}
+
+.igm-rotating-toggle-btn {
+  height: 32px;
+  width: 32px;
+  margin: 0;
+  background-color: $white;
+
+  @media (min-width: 650px) {
+    margin-right: 9px;
+  }
+
+  &:focus,
+  &:hover,
+  &:active {
+    background-color: $tundora-grey;
+
+    .igm-rotating-toggle-btn__line {
+      background-color: $white;
+    }
+  }
+}
+
+.igm-rotating-toggle-btn__line {
+  height: 4px;
+  width: 16px;
+  margin-top: -2px;
+  margin-left: -8px;
+  background-color: $boulder-grey;
+}
+
+.palette__toolbar-contents {
+  display: flex;
+}
+
+.igm-collapsable-toolbar__collapser {
+  margin-right: 5px;
+}
+
+.igm-collapser {
+  display: flex;
+}
+
+.igm-collapser--collapsed {
+  display: none;
+}

@@ -4,11 +4,13 @@
   "private": true,
   "dependencies": {
     "@bbc/igm-btn": "^2.0.0",
+    "@bbc/igm-collapsable-toolbar": "^1.9.0",
     "@bbc/igm-gel-icon": "^1.13.0",
     "@bbc/igm-reveal": "^2.0.0",
     "favorite-star": "^0.1.5",
     "node-sass": "^4.12.0",
     "react": "^16.8.6",
+    "react-aria-announcer": "^1.1.0",
     "react-cookie": "^4.0.0",
     "react-dom": "^16.8.6",
     "react-scripts": "3.0.1"

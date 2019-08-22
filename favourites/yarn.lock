@@ -943,6 +943,24 @@
     "@bbc/igm-base" "1.0.0"
     classnames "^2.2.5"
 
+"@bbc/igm-collapsable-toolbar@^1.9.0":
+  version "1.9.0"
+  resolved "https://registry.yarnpkg.com/@bbc/igm-collapsable-toolbar/-/igm-collapsable-toolbar-1.9.0.tgz#9d7d1d867f161dea064a5cb9c70a3682aa47d1bf"
+  integrity sha512-bBoa+MRvoHcojF97Qog5DwHiy6yjQj59Fqx3dvXk/LX68mlL1ZClz/4mdAG1Z8TrStvwAcM6OJptpFF0cDM2Lw==
+  dependencies:
+    "@bbc/igm-base" "^1.1.0"
+    "@bbc/igm-collapser" "^1.0.0"
+    "@bbc/igm-rotating-toggle-btn" "^2.0.0"
+    classnames "^2.2.5"
+
+"@bbc/igm-collapser@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@bbc/igm-collapser/-/igm-collapser-1.0.0.tgz#3249e4e2ac55fe8af4388c77183f58ec082ae2c7"
+  integrity sha1-Mknk4qxV/or0OIx3GD9Y7Agq4sc=
+  dependencies:
+    "@bbc/igm-base" "1.0.0"
+    classnames "^2.2.5"
+
 "@bbc/igm-gel-icon@^1.13.0":
   version "1.13.0"
   resolved "https://registry.yarnpkg.com/@bbc/igm-gel-icon/-/igm-gel-icon-1.13.0.tgz#0b1f497e9a6bb9eb2d8b3843c0b45e076c025b71"
@@ -957,6 +975,13 @@
   integrity sha512-Q+31ElvPO5oCo2z8X+kywFLvh3HCc29e4zkaFZXIStRRl1glcbV4wLXSRzlP5vdvmEchMBvTF7m6ogOGdSwD0Q==
   dependencies:
     "@bbc/igm-base" "^1.1.0"
+    classnames "^2.2.5"
+
+"@bbc/igm-rotating-toggle-btn@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@bbc/igm-rotating-toggle-btn/-/igm-rotating-toggle-btn-2.0.0.tgz#3a4910d7f10ac8827435b64430df0c56be51b727"
+  integrity sha512-HYhnb5HGXbK8XFPZE2pKDFo+50kU8vtvN2y2f1Wnb8bhwc/Wi3VXtMlTexeDJw56FU3TCCROTpckHBR4uR9M+Q==
+  dependencies:
     classnames "^2.2.5"
 
 "@cnakazawa/watch@^1.0.3":
@@ -7996,7 +8021,7 @@ prompts@^2.0.1:
     kleur "^3.0.2"
     sisteransi "^1.0.0"
 
-prop-types@^15.6.2:
+prop-types@^15.6.2, prop-types@^15.7.2:
   version "15.7.2"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.7.2.tgz#52c41e75b8c87e72b9d9360e0206b99dcbffa6c5"
   integrity sha512-8QQikdH7//R2vurIJSutZ1smHYTcLpRWEOlHnzcWHmBYrOGUysKwSsrC89BCiFj3CbrfJ/nXFdJepOVrY1GCHQ==
@@ -8169,6 +8194,15 @@ react-app-polyfill@^1.0.1:
     regenerator-runtime "0.13.2"
     whatwg-fetch "3.0.0"
 
+react-aria-announcer@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/react-aria-announcer/-/react-aria-announcer-1.1.0.tgz#2aa4a9d3c77e100b02b0bfe9795671faf49fd78d"
+  integrity sha512-Fd+JVSv0K1yEWRyYHBZT7mf0DPtH/ZotW4hDQCermJDYrncdS0ReOfUMdAlLJZOrh5gbuRjsGCbhCQ9FU20MdA==
+  dependencies:
+    prop-types "^15.7.2"
+    react "^16.8.4"
+    react-dom "^16.8.4"
+
 react-cookie@^4.0.0:
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/react-cookie/-/react-cookie-4.0.1.tgz#c21b2c30a5cacf320b45338fa3dcaf76d9fe9c2c"
@@ -8208,6 +8242,16 @@ react-dev-utils@^9.0.1:
     sockjs-client "1.3.0"
     strip-ansi "5.2.0"
     text-table "0.2.0"
+
+react-dom@^16.8.4:
+  version "16.9.0"
+  resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-16.9.0.tgz#5e65527a5e26f22ae3701131bcccaee9fb0d3962"
+  integrity sha512-YFT2rxO9hM70ewk9jq0y6sQk8cL02xm4+IzYBz75CQGlClQQ1Bxq0nhHF6OtSbit+AIahujJgb/CPRibFkMNJQ==
+  dependencies:
+    loose-envify "^1.1.0"
+    object-assign "^4.1.1"
+    prop-types "^15.6.2"
+    scheduler "^0.15.0"
 
 react-dom@^16.8.6:
   version "16.8.6"
@@ -8288,6 +8332,15 @@ react-scripts@3.0.1:
     workbox-webpack-plugin "4.2.0"
   optionalDependencies:
     fsevents "2.0.6"
+
+react@^16.8.4:
+  version "16.9.0"
+  resolved "https://registry.yarnpkg.com/react/-/react-16.9.0.tgz#40ba2f9af13bc1a38d75dbf2f4359a5185c4f7aa"
+  integrity sha512-+7LQnFBwkiw+BobzOF6N//BdoNw0ouwmSJTEm9cglOOmsg/TMiFHZLe2sEoN5M7LgJTj9oHH0gxklfnQe66S1w==
+  dependencies:
+    loose-envify "^1.1.0"
+    object-assign "^4.1.1"
+    prop-types "^15.6.2"
 
 react@^16.8.6:
   version "16.8.6"
@@ -8769,6 +8822,14 @@ scheduler@^0.13.6:
   version "0.13.6"
   resolved "https://registry.yarnpkg.com/scheduler/-/scheduler-0.13.6.tgz#466a4ec332467b31a91b9bf74e5347072e4cd889"
   integrity sha512-IWnObHt413ucAYKsD9J1QShUKkbKLQQHdxRyw73sw4FN26iWr3DY/H34xGPe4nmL1DwXyWmSWmMrA9TfQbE/XQ==
+  dependencies:
+    loose-envify "^1.1.0"
+    object-assign "^4.1.1"
+
+scheduler@^0.15.0:
+  version "0.15.0"
+  resolved "https://registry.yarnpkg.com/scheduler/-/scheduler-0.15.0.tgz#6bfcf80ff850b280fed4aeecc6513bc0b4f17f8e"
+  integrity sha512-xAefmSfN6jqAa7Kuq7LIJY0bwAPG3xlCj0HMEBQk1lxYiDKZscY2xJ5U/61ZTrYbmNQbXa+gc7czPkVo11tnCg==
   dependencies:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"

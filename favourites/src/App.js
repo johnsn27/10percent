@@ -1,5 +1,6 @@
 import React from 'react';
 import Likes from './likes';
+import HigherOrder from './higherOrder'
 
 const styles = {
   fontFamily: 'sans-serif',
@@ -8,7 +9,7 @@ const styles = {
 
 const App = () => (
   <div style={styles}>
-    <Likes/>
+    <HigherOrder/>
   </div>
 );
 
