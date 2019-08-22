@@ -9,7 +9,7 @@ const styles = {
 
 const App = () => (
   <div style={styles}>
-    <HigherOrder/>
+    <Likes/>
   </div>
 );
 

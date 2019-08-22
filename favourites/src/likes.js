@@ -3,8 +3,9 @@ import './likes.css';
 import Btn from '@bbc/igm-btn';
 import Reveal from '@bbc/igm-reveal';
 import GELIcon from '@bbc/igm-gel-icon';
+import AccessiblePaletteButton from './palette-button';
 
-class likes extends Component {
+class Likes extends Component {
 
   updateClicks(blockType) {
     if (typeof (Storage) !== "undefined") {
@@ -35,16 +36,17 @@ class likes extends Component {
   }
 
   render() {
-    const blockTypes = ['text', 'headline', 'anotherOne'];
-    const blockArray = [[blockTypes[0], localStorage.getItem(blockTypes[0])], [blockTypes[1], localStorage.getItem(blockTypes[1])], [blockTypes[2], localStorage.getItem(blockTypes[2])]]
+    const blockTypes = ['text', 'headline', 'image', 'media', 'many', 'more', 'blocks'];
+    const blockArray = [[blockTypes[0], localStorage.getItem(blockTypes[0])], [blockTypes[1], localStorage.getItem(blockTypes[1])], [blockTypes[2], localStorage.getItem(blockTypes[2])], [blockTypes[3], localStorage.getItem(blockTypes[3])], [blockTypes[4], localStorage.getItem(blockTypes[4])], [blockTypes[5], localStorage.getItem(blockTypes[5])], [blockTypes[6], localStorage.getItem(blockTypes[6])]]
     const sortedBlockArray = this.getOrder(blockArray);
 
     return (
       <div>
         <div className="flex-container row">
-          <div id={sortedBlockArray[0][0]} className="flex-item" onClick={() => this.updateClicks(blockArray[0][0])}>{sortedBlockArray[0][0]}</div>
-          <div id={sortedBlockArray[1][0]} className="flex-item" onClick={() => this.updateClicks(blockArray[1][0])}>{sortedBlockArray[1][0]}</div>
-          <div id={sortedBlockArray[2][0]} className="flex-item" onClick={() => this.updateClicks(blockArray[2][0])}>{sortedBlockArray[2][0]}</div>
+          <AccessiblePaletteButton onClick={() => this.updateClicks(sortedBlockArray[0][0])} blockType={sortedBlockArray[0][0]} />
+          <AccessiblePaletteButton onClick={() => this.updateClicks(sortedBlockArray[1][0])} blockType={sortedBlockArray[1][0]} />
+          <AccessiblePaletteButton onClick={() => this.updateClicks(sortedBlockArray[2][0])} blockType={sortedBlockArray[2][0]} />
+          <AccessiblePaletteButton onClick={() => this.updateClicks(sortedBlockArray[3][0])} blockType={sortedBlockArray[3][0]} />
         </div>
         <div className="Reveal">
           <Reveal
@@ -67,9 +69,9 @@ class likes extends Component {
             className="info-section"
             isOpen={true}
           >
-            <div id={sortedBlockArray[0][0]} className="flex-item" onClick={() => this.updateClicks(blockArray[0][0])}>Many</div>
-            <div id={sortedBlockArray[1][0]} className="flex-item" onClick={() => this.updateClicks(blockArray[1][0])}>More</div>
-            <div id={sortedBlockArray[2][0]} className="flex-item" onClick={() => this.updateClicks(blockArray[2][0])}>Buttons</div>
+            <AccessiblePaletteButton onClick={() => this.updateClicks(sortedBlockArray[4][0])} blockType={sortedBlockArray[4][0]} />
+            <AccessiblePaletteButton onClick={() => this.updateClicks(sortedBlockArray[5][0])} blockType={sortedBlockArray[5][0]} />
+            <AccessiblePaletteButton onClick={() => this.updateClicks(sortedBlockArray[6][0])} blockType={sortedBlockArray[6][0]} />
           </Reveal>
         </div >
       </div>
@@ -77,4 +79,4 @@ class likes extends Component {
   }
 }
 
-export default likes;
+export default Likes;

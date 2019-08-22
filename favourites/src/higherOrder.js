@@ -7,13 +7,13 @@ import Likes from './likes';
 class HigherOrder extends Component {
 
   render() {
+    
     return (
       <div contentEditable="false" suppressContentEditableWarning className={`paletteClass`}>
         <span className="palette__toolbar-contents">
-          <Likes><AccessiblePaletteButton blockType="text" /></Likes>
-          <AccessiblePaletteButton blockType="headline" />
-          <AccessiblePaletteButton blockType="media" />
-          <AccessiblePaletteButton blockType="image" />
+          <AccessiblePaletteButton blockType="text" />
+          <AccessiblePaletteButton blockType="text" />
+          <AccessiblePaletteButton blockType="text" />
         </span>
       </div>
     );
