@@ -4,6 +4,8 @@
   "private": true,
   "dependencies": {
     "@bbc/igm-btn": "^2.0.0",
+    "@bbc/igm-gel-icon": "^1.13.0",
+    "@bbc/igm-reveal": "^2.0.0",
     "favorite-star": "^0.1.5",
     "node-sass": "^4.12.0",
     "react": "^16.8.6",
