@@ -21,21 +21,9 @@ class LeftSideBar extends Component {
     }
   }
 
-// TODO: make this function be called
+  // TODO: make this function be called
 
-  getOrder(a, b) {
-    if (a[1] === b[1]) {
-      return 0;
-    }
-    else {
-      return (b[1] < a[1]) ? -1 : 1;
-    }
-  }
-
-  render() {
-    const blockTypes = ['text', 'headline', 'anotherOne'];
-    const blockArray = [[blockTypes[0], localStorage.getItem(blockTypes[0])], [blockTypes[1], localStorage.getItem(blockTypes[1])], [blockTypes[2], localStorage.getItem(blockTypes[2])]]
-    console.log(blockArray);
+  getOrder(blockArray) {
     blockArray.sort(compareSecondColumn);
     function compareSecondColumn(a, b) {
       if (a[1] === b[1]) {
@@ -45,13 +33,19 @@ class LeftSideBar extends Component {
         return (b[1] < a[1]) ? -1 : 1;
       }
     }
-    console.log(blockArray[0][0]);
+    return blockArray
+  }
+
+  render() {
+    const blockTypes = ['text', 'headline', 'anotherOne'];
+    const blockArray = [[blockTypes[0], localStorage.getItem(blockTypes[0])], [blockTypes[1], localStorage.getItem(blockTypes[1])], [blockTypes[2], localStorage.getItem(blockTypes[2])]]
+    const sortedBlockArray = this.getOrder(blockArray);
 
     return (
       <div className="flex-container row">
-        <div id={blockArray[0][0]} className="flex-item" onClick={() => this.updateClicks(blockArray[0][0])}>{blockArray[0][0]}</div>
-        <div id={blockArray[1][0]} className="flex-item" onClick={() => this.updateClicks(blockArray[1][0])}>{blockArray[1][0]}</div>
-        <div id={blockArray[2][0]} className="flex-item" onClick={() => this.updateClicks(blockArray[2][0])}>{blockArray[2][0]}</div>
+        <div id={sortedBlockArray[0][0]} className="flex-item" onClick={() => this.updateClicks(blockArray[0][0])}>{sortedBlockArray[0][0]}</div>
+        <div id={sortedBlockArray[1][0]} className="flex-item" onClick={() => this.updateClicks(blockArray[1][0])}>{sortedBlockArray[1][0]}</div>
+        <div id={sortedBlockArray[2][0]} className="flex-item" onClick={() => this.updateClicks(blockArray[2][0])}>{sortedBlockArray[2][0]}</div>
       </div>
     );
   }
