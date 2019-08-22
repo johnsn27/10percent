@@ -4,8 +4,6 @@ import Btn from '@bbc/igm-btn';
 import Reveal from '@bbc/igm-reveal';
 import GELIcon from '@bbc/igm-gel-icon';
 
-// TODO: create show more button
-
 class likes extends Component {
 
   updateClicks(blockType) {
@@ -71,10 +69,9 @@ class likes extends Component {
             className="info-section"
             isOpen={true}
           >
-            <div id={sortedBlockArray[0][0]} className="flex-item" onClick={() => this.updateClicks(blockArray[0][0])}>{sortedBlockArray[0][0]}</div>
-            <div id={sortedBlockArray[1][0]} className="flex-item" onClick={() => this.updateClicks(blockArray[1][0])}>{sortedBlockArray[1][0]}</div>
-            <div id={sortedBlockArray[2][0]} className="flex-item" onClick={() => this.updateClicks(blockArray[2][0])}>{sortedBlockArray[2][0]}</div>
-
+            <div id={sortedBlockArray[0][0]} className="flex-item" onClick={() => this.updateClicks(blockArray[0][0])}>Many</div>
+            <div id={sortedBlockArray[1][0]} className="flex-item" onClick={() => this.updateClicks(blockArray[1][0])}>More</div>
+            <div id={sortedBlockArray[2][0]} className="flex-item" onClick={() => this.updateClicks(blockArray[2][0])}>Buttons</div>
           </Reveal>
         </div >
       </div>
